@@ -1,0 +1,220 @@
+/* ### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+
+- Weights: 200, 400, 600 */
+
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+:root {
+    --primary-color-first-box:hsl(180, 62%, 55%);
+    --primary-color-second-box:hsl(0, 78%, 62%);
+    --primary-color-third-box:hsl(34, 97%, 64%);
+    --primary-color-fourth-box:hsl(212, 86%, 64%);
+    font-size: 15px;
+}
+
+body {
+    background-color:hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+
+h1 {
+    color:hsl(234, 12%, 34%);
+    font-size: 1.5rem;
+    font-weight:200;
+    text-align: center;
+    margin-top: 2em;
+    
+}
+
+h2 {
+    color:hsl(234, 12%, 34%);
+    font-size: 1.2rem;
+    font-weight:600;
+    
+}
+
+span {
+    font-weight:600;
+    text-align: center;
+}
+
+p{
+    color:hsl(229, 6%, 66%);
+    font-size: 0.9rem;
+    font-weight:200;
+    text-align: left;
+    max-width:529px;
+    
+}
+
+.text {
+    margin:2em;
+    margin-bottom:3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.firstParapgrah {
+    align-self: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.img1 {
+    display:flex;
+    justify-content: flex-end;
+    margin: 2em 0 1em 0;
+}
+
+img {
+    width: 4em;
+
+}
+
+.gridContainer{
+    margin:2em;
+}
+
+.firstGrid {
+    background-color: white;
+    border-top-style:solid;
+    border-color: var(--primary-color-first-box);;
+    border-radius: 3px;
+    box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    -webkit-box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    margin-bottom: 1.5em;
+    padding:0.5em 1.5em 0.5em 1.5em;
+}
+
+.secondGrid {
+    background-color: white;
+    border-top-style: solid;
+    border-color:var(--primary-color-second-box);
+    border-radius: 3px;
+    box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    -webkit-box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    margin-bottom: 1.5em;
+    padding:0.5em 1.5em 0.5em 1.5em;
+
+}
+
+
+.thirdGrid {
+    background-color: white;
+    border-top-style: solid; 
+    border-color:var(--primary-color-third-box);
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+    box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    -webkit-box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    padding:0.5em 1.5em 0.5em 1.5em;
+}
+
+.fourthGrid {
+    background-color: white;
+    border-top-style: solid; 
+    border-color:var(--primary-color-fourth-box);
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+    box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    -webkit-box-shadow: 0px 14px 20px 1px hsla(212, 86%, 64%, 0.2);
+    padding:0.5em 1.5em 0.5em 1.5em;
+}
+
+
+@media (min-width:1000px) {
+    
+
+    body,
+    html {
+        width:100%;
+        height:100%;
+    }
+
+    h1{
+        margin-bottom: 0.5em;
+    }
+
+    .firstParapgrah{
+    margin:0;
+    }
+
+    .gridContainer {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1em;
+        margin:0 10%;
+        margin-bottom: 5%;
+        
+    }
+
+
+    .firstGrid{
+        grid-column: 1/2;
+        Grid-row: 1/3;
+        margin: 0;
+        align-self:center;
+       
+        
+        
+    }
+
+    .secondGrid{
+        margin:0;
+        grid-column: 2/3;
+    }
+
+    .thirdGrid{
+        grid-column-start: 2;
+        grid-column-end:3;
+        margin:0;
+        
+    }
+
+    .fourthGrid{
+        grid-column: 3/4;
+        Grid-row: 1/3;
+        margin:0;
+        align-self:center;
+        
+    }
+
+}
+
+
+.attribution { 
+    font-size: 14px; text-align: right; 
+    position:relative;
+    text-align:center;
+    
+    max-width: 100%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
